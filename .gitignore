@@ -1,0 +1,12 @@
+# Ignore OS and IDE files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Ignore WordPress core & uploads (if any accidentally added)
+node_modules/
+uploads/
+*.zip
+*.sql

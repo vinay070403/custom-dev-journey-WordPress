@@ -1,0 +1,482 @@
+/*
+Theme Name: Dev Journey
+Theme URI: https://github.com/vinay/dev-journey
+Author: vinay chavada
+Author URI: https://vinayportfolio.com
+Description: A custom WordPress theme built during a 30-day developer journey to master WordPress development.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dev-journey
+Tags: custom-theme, blog, wordpress-developer
+*/
+
+
+
+/* Main full screen body style */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9f9;
+}
+
+/* Container for the homepage */
+.homepage {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Homepage title and description */
+.homepage-title {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.homepage-description {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Grid layout for posts */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Post card style */
+.post-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.post-thumbnail {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.post-title {
+    font-size: 1.4rem;
+    color: #222;
+    margin: 0 0 10px;
+}
+
+.post-title a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
+.post-title a:hover {
+    text-decoration: underline;
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.post-excerpt {
+    color: #444;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #222;
+}
+
+/* Container - Wraps all content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Header Wrapper */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #111;
+}
+
+
+/* ========== General Reset ========== */
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* ========== Page Links Generated via get_pages() ========== */
+body>a {
+    margin: 10px;
+    display: inline-block;
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+body>a:hover {
+    color: #005177;
+}
+
+/* ========== Page Hero Section ========== */
+.page-hero {
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-hero .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    /* dark transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.page-hero .page-title {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+}
+
+/* ========== Content Wrapper ========== */
+.content-wrapper.full-width {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.main-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.main-content p {
+    margin-bottom: 20px;
+}
+
+/* Optional: Responsive Adjustments */
+@media (max-width: 768px) {
+    .page-hero {
+        height: 40vh;
+    }
+
+    .page-hero .page-title {
+        font-size: 2rem;
+    }
+}
+
+
+/* ========= SINGLE POST HERO ========= */
+.single-hero {
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-hero .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.single-hero .post-title {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.single-hero .post-meta {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+/* ========= CONTENT WRAPPER ========= */
+.content-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.main-content .post-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.main-content .post-content p {
+    margin-bottom: 20px;
+}
+
+/* ========= POST NAVIGATION ========= */
+.post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.post-nav a {
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.post-nav a:hover {
+    color: #004466;
+}
+
+/* ========= ANIMATIONS ========= */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+
+
+/* ===== Page Navigation Links ===== */
+.page-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.page-links a {
+    text-decoration: none;
+    color: #0073aa;
+    font-weight: 500;
+    padding: 10px 15px;
+    background: #f3f3f3;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.page-links a:hover {
+    background-color: #0073aa;
+    color: #fff;
+}
+
+/* ===== Page Hero Section ===== */
+.page-hero {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-hero .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-hero .page-title {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ===== Content Area ===== */
+.content-wrapper.full-width {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.main-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Footer styling */
+.site-footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+    margin-top: 4rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Optional: Make the footer stick to bottom if page is short */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-footer {
+    margin-top: auto;
+}
+
+.logocenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.logocenter img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Header styles */
+.site-header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #222;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #000;
+}
